@@ -7,7 +7,7 @@ function setTimer()
      let timerMonth = "8";
      let timerDay = "1";
      let timerYear = "2022";
-     let timerHour = "1";
+     let timerHour = "0";
      let timerMin = "0";
      
      if (timerHour == "")
