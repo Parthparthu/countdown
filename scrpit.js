@@ -46,7 +46,7 @@ function setTimer()
           if (timeLeft < 0)
           {
                clearInterval(myFunction);
-               document.getElementById("end").innerHTML = "Happy Birthday Darsh!";
+               document.getElementById("end").innerHTML = "Happy Birthday Master!";
                document.getElementById("days").innerHTML = "0";
                document.getElementById("hours").innerHTML = "0";
                document.getElementById("minutes").innerHTML = "0";
