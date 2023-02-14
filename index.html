@@ -21,7 +21,7 @@
       body 
       {
         text-align: center;
-        background: #00ecb9;
+        background-color: #23c2ba;
         font-family: sans-serif;
         font-weight: 100;
         font-size: x-large;
@@ -29,16 +29,46 @@
 
       h1 
       {
-        color: #396;
+        color: #2e928d;
         font-weight: 100;
         font-size: xx-large;
         margin: 40px 0px 20px;
       }
 
+      .container
+      {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+
+      .images
+      {
+        margin-top: 53px;
+        margin-left: 22px;
+        display: flex;
+        width: 620px;
+      }
+
+      #theImage
+      {
+        border-radius: 22px;
+      }
+      #theImage:hover
+      {
+        opacity: 0.9;
+        box-shadow: 20px 20px 22px black;
+      }
+
+      .textContent
+      {
+        margin: 40px;
+      }
+
       .headingName
       {
         color: red; 
-        font-size: 8rem;
+        font-size: 7.1rem;
       }
 
       #clockDiv 
@@ -51,12 +81,17 @@
         font-size: xx-large;
       }
 
-      #clockDiv > div 
+      .timeBox
       {
         padding: 10px;
         border-radius: 10px;
-        background: #00bf96;
+        background: #1c9c95;
         display: inline-block;
+      }
+      .timeBox:hover
+      {
+        opacity: 0.9;
+        box-shadow: 10px 10px 22px black;
       }
 
       #clockDiv > span 
@@ -79,11 +114,6 @@
         font-weight: bolder;
       }
 
-      .images 
-      {
-        background-color: #00816a;
-      }
-
       @media screen and (max-width: 900px)
       {
         .headingName
@@ -98,39 +128,45 @@
           padding-top: 8px;
           font-size: 1.3rem;
         }
+
+        .images
+        {
+          margin-left: 8px;
+        }
       }
     </style>
     <link rel="icon" href="new-years-eve.png" type="image/icon type">
   </head>
   <body>
-    <h1>Time left in<br><span class="headingName">&nbsp&nbspPranav's Birthday!</span></h1>
-    <br><br>
-
-    <div id="clockDiv">
-      <div>
-        <span id="days" class="smalltext"></span>
-        <div class="smalltext getBold">Days</div>
-      </div>
-      <div>
-        <span id="hours" class="smalltext"></span>
-        <div class="smalltext getBold">Hours</div>
-      </div>
-      <div>
-        <span id="minutes" class="smalltext"></span>
-        <div class="smalltext getBold">Minutes</div>
-      </div>
-      <div>
-        <span id="seconds" class="smalltext"></span>
-        <div class="smalltext getBold">Seconds</div>
-      </div>
-      <h2 id="end"></h2>
+    <div class="container">
       <div class="images">
-        <div>
-          <image src="pranav.jpg" width="100%" alt="Somebody is late at there work"></image>
-          <p></p>
-        </div>
+        <image src="parth.jpg" width="100%" alt="Somthing is missing" id="theImage"></image>
+        <p></p>
+      </div>
+      <div class="textContent">
+        <h1>Time left in<br><span class="headingName">&nbsp&nbspParth's Birthday!</span></h1>
+        <br><br>
+        <div id="clockDiv">
+          <div class="timeBox">
+            <span id="days" class="smalltext"></span>
+            <div class="smalltext getBold">Days</div>
+          </div>
+          <div class="timeBox">
+            <span id="hours" class="smalltext"></span>
+            <div class="smalltext getBold">Hours</div>
+          </div>
+          <div class="timeBox">
+            <span id="minutes" class="smalltext"></span>
+            <div class="smalltext getBold">Minutes</div>
+          </div>
+          <div class="timeBox">
+            <span id="seconds" class="smalltext"></span>
+            <div class="smalltext getBold">Seconds</div>
+          </div>
+          <h2 id="end"></h2>
       </div>
     </div>
+
     <script>
       let myFunction;
       setTimer();
@@ -138,9 +174,9 @@
       {
         clearInterval(myFunction);
 
-        let timerMonth = "2";
-        let timerDay = "12";
-        let timerYear = "2023";
+        let timerMonth = "1";
+        let timerDay = "17";
+        let timerYear = "2024";
         let timerHour = "0";
         let timerMin = "0";
 
