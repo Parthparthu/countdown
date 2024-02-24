@@ -110,7 +110,7 @@
 
       .headingName
       {
-        color: red; 
+        color: #ff0000; 
         font-size: 6.2rem;
       }
 
@@ -126,7 +126,9 @@
 
       .timeBox
       {
-        padding: 10px;
+        margin: 8px;
+        width: 103px;
+        padding: 8px;
         border-radius: 10px;
         background: #1c9c95;
         display: inline-block;
@@ -193,8 +195,8 @@
       {
         .headingName
         {
-          color: red;
-          font-size: 224%;
+          color: #ff0000;
+          font-size: 3.5rem;
         }
 
         .smalltext 
@@ -254,8 +256,19 @@
         let timerDay = "18";
         let currentDate = new Date();
         let currentYear = currentDate.getFullYear();
-        let yearsss = currentYear + 1;
-        let timerYear = yearsss.toString();
+        let yearsss = currentYear;
+        let yearssss = currentYear + 1; 
+
+        if (yearssss > yearsss)
+        {
+          years23 = yearsss;
+        }
+        else if (yearssss < yearsss)
+        {
+          years23 = yearssss;
+        }
+
+        let timerYear = years23.toString();
         let timerHour = "0";
         let timerMin = "0";
 
