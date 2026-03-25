@@ -34,7 +34,7 @@
       h1 
       {
         color: #2e928d;
-        font-weight: 100;
+        font-weight: 300;
         font-size: xx-large;
         margin: 40px 0px 20px;
       }
@@ -51,7 +51,7 @@
         margin-top: 53px;
         margin-left: 22px;
         display: flex;
-        width: 530px;
+        width: 35%;
         position: relative;
       }
 
@@ -63,6 +63,7 @@
       .images:hover #theImage
       {
         box-shadow: 1px 1px 40px #d3d3d3;
+        filter: brightness(70%)
       }
 
       #theImage
@@ -106,12 +107,14 @@
       .textContent
       {
         margin: 40px;
+        flex: 1;
       }
 
       .headingName
       {
         color: #ff0000; 
         font-size: 6.2rem;
+        font-weight: 500;
       }
 
       #clockDiv 
@@ -191,6 +194,16 @@
         }
       }
 
+      @media screen and (max-width: 1024px)
+      {
+        .timeBox
+        {
+          margin: 6px;
+          width: 100px;
+          padding: 12px;
+        }
+      }
+
       @media screen and (max-width: 600px)
       {
         .headingName
@@ -208,6 +221,12 @@
         .images
         {
           margin-left: 8px;
+          width: 85%;
+        }
+        .textContent
+        {
+          margin: 20px auto;
+          width: 85%;
         }
         .timeBox
         {
@@ -269,20 +288,19 @@
 
         let timerMonth = "1";
         let timerDay = "17";
-        let currentDate = new Date();
-        let currentYear = currentDate.getFullYear();
-        let yearsss = currentYear;
-        let yearssss = currentYear + 1; 
+        const currentDate = new Date();
+        const currentYear = currentDate.getFullYear();
+        const ThisBirthday = new Date(currentYear, timerMonth - 1, timerDay);
 
-        if (yearssss > yearsss)
+        if (currentDate > ThisBirthday) 
         {
-          years23 = yearsss;
-        }
-        else if (yearssss < yearsss)
+          years23 = currentYear + 1;
+        } 
+        else 
         {
-          years23 = yearssss;
+          years23 = currentYear;
         }
-
+      
         let timerYear = years23.toString();
         let timerHour = "0";
         let timerMin = "0";
@@ -329,10 +347,10 @@
 
           document.getElementById("end").innerHTML = "";
 
-          if (timeLeft < 0) 
+          if (timeLeft < 0 || days == 364)
           {
             clearInterval(myFunction);
-            document.getElementById("end").innerHTML = "Happy Birthday Aadya!";
+            document.getElementById("end").innerHTML = "Happy Birthday Pradyumna!";
             document.body.style.backgroundImage = "url('blast.gif')";
             document.getElementById("days").innerHTML = "0";
             document.getElementById("hours").innerHTML = "0";
